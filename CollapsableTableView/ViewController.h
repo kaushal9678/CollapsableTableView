@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
-
-
+#import "Location.h"
+#import "SectionView.h"
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,SectionView>
+{NSMutableIndexSet *expandedSections;
+    Location *locations;
+}
+@property (nonatomic, assign) NSInteger openSectionIndex;
+@property (nonatomic, strong) NSMutableArray *sectionInfoArray;
+@property (nonatomic, strong) NSArray *categoryList;
 @end
 
